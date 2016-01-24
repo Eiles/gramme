@@ -6,6 +6,9 @@
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
   <style>
   #left { float:left; list-style-type: none; margin: 0; padding: 0; width: 49%; }
   #sortable {list-style-type: none; margin: 0; padding: 0; }
@@ -117,6 +120,18 @@
   </script>
 </head>
 <body>
+<header>
+ <nav class="navbar navbar-light bg-faded">
+  <ul class="nav navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Gramme - Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="">Projects</a>
+    </li>
+  </ul>
+</nav>
+</header>
   <div id="left">
     <ul id="sortable" style="height:80vh; overflow:scroll">
       <?php 

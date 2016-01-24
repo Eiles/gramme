@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>jQuery UI Sortable - Default functionality</title>
+  <title>Gramme</title>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <style>
@@ -23,7 +26,7 @@
           
           reader.onload = function (e) {
               var id=$(".imgInp").last().attr("data-id");
-              $("#sortable").append($("<li><img src='#' class='imgpreview' name='"+(id)+"' data-id='"+id+"'><button class='imgBtn' data-id='"+(id)+"'>Supprimer</button></li>"));
+              $("#sortable").append($("<li class='content-img'><img src='#' class='imgpreview' name='"+(id)+"' data-id='"+id+"'><button class='imgBtn btn-delete-post' data-id='"+(id)+"'>Supprimer</button></li>"));
               $('.imgpreview').last().attr('src', e.target.result);
               $( "input[data-id='"+id+"']" ).hide();
               $("#postedit").append("<input type='file' class='imgInp' name='"+(id+1)+"' data-id='"+(id+1)+"'/>")
@@ -58,21 +61,49 @@
   </script>
 </head>
 <body>
-  <div id="postedit">
-    <input type="text" class="title" name="title" placeholder="Titre">
-    <input type="text" class="type" name="type" placeholder="Type">
-    <input type="text" class="year" name="year" placeholder="Année">
-    <textarea name="text" class="text" form="theform" placeholder="Texte">Enter text here...</textarea>
-    <input type='file' class="imgInp" name="0" data-id="0"/>
+<header>
+ <nav class="navbar navbar-light bg-faded">
+  <ul class="nav navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="admin">Gramme - Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Projects</a>
+    </li>
+  </ul>
+</nav>
+</header>
+  <div id="postedit" class="form-add-post">
+    <div class="form-group">
+      <label>Titre</label>
+      <input type="text" class="title" name="title" placeholder="Titre">
+    </div>
+
+    <div class="form-group">
+      <label>Sous-titre</label>
+      <input type="text" class="type" name="type" placeholder="Type">
+    </div>
+    <div class="form-group">
+      <label>Année </label>
+      <input type="text" class="year" name="year" placeholder="Année">
+    </div>
+    <div class="form-group">
+      <label>Descritption</label>
+      <textarea name="text" class="text" form="theform" placeholder="Texte">Enter text here...</textarea>
+    </div>
+    
+    <div class="form-group">
+      <label>Images Projet</label>
+      <input type='file' class="imgInp" name="0" data-id="0"/>
+    </div>
   </div>
-    <ul id="sortable" style="height:80vh; overflow:scroll">
+    <ul id="sortable" style="height:80vh; overflow:scroll;width:50%;margin:auto">
 
     </ul>
-    <button id="savebutton">Save</button>
+    <button id="savebutton" class="btn btn-primary" style="position:absolute;right:50px;bottom:0px">Save</button>
   </div>
-  <form enctype="multipart/form-data" action="posts.php?action=createpost" method="post" id="theform">
+  <form enctype="multipart/form-data" action="posts.php?action=createpost" method="post" id="theform" style="display:none">
     
-    <input type="submit">
   </form>
 </body>
 </html>
