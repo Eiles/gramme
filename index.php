@@ -32,7 +32,7 @@
           echo('<div data-id="'.$postlist["id"][$i].'" class="project"><img src="img/'.$row[0].'"></div>');
           echo('<script>
               $("div[data-id=\"'.$postlist["id"][$i].'\"]").click(function(){
-                $("#modal").html("<span class=\"sousTitre\">'.$postlist["titre"][$i].'</span><br>'.$postlist["type"][$i].'<br>'.$postlist["year"][$i].'<br><br>'.$postlist["text"][$i].'<br><br>');
+                $("#modal").html("<span class=\"sousTitre\">'.$postlist["title"][$i].'</span><br>'.$postlist["type"][$i].'<br>'.$postlist["year"][$i].'<br><br>'.$postlist["text"][$i].'<br><br>');
                     while($row = $selectedPosts->fetch_row()){
                       echo("<img style='width:700px' src='img/".$row[0]."'><br><br><br>");
                     }

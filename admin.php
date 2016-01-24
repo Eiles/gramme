@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  if(!isset($_SESSION["id"])){
+      header('Location: /login.php');
+    }     
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -25,7 +31,12 @@
 </nav>
 </header>
   <div>
-    <a href="postcreate.php"> Créer un projet </a>
+    <a href="/postcreate.php"> Créer un projet GRAMME</a>
+    <a href="/postselect.php"> Gerer les projets GRAMME</a>
+    <a href="/studio/postcreate.php"> Créer un projet STUDIO</a>
+    <a href="/studio/postselect.php"> Gerer les projets STUDIO</a>
+    <a href="/design/postcreate.php"> Créer un projet DESIGN</a>
+    <a href="/design/postselect.php"> Gerer les projets DESIGN</a>
   </div>
 </body>
 </html>
