@@ -1,0 +1,12 @@
+.project>img{
+	max-width: 20vw;
+	max-height: 20vh;
+}
+
+
+.project{
+	position: absolute;
+	top:5vh;
+	left:40vw;
+	transition: all 2s ease;
+}
