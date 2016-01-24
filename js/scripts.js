@@ -37,3 +37,25 @@ function placeProjects(){
 		return;
 	});
 }
+
+function hideModal(){
+   // On cache le fond et la fenêtre modale
+   $('#fond, .popup').hide();
+   $('.popup').html('');
+}
+
+function resizeModal(){
+   var modal = $('#modal');
+   // On récupère la largeur de l'écran et la hauteur de la page afin de cacher la totalité de l'écran
+   var winH = $(document).height();
+   var winW = $(window).width();
+   
+   // le fond aura la taille de l'écran
+   $('#fond').css({'width':winW,'height':winH});
+   
+   // On récupère la hauteur et la largeur de l'écran
+   var winH = $(window).height();
+   // On met la fenêtre modale au centre de l'écran
+   modal.css('top', winH/2 - modal.height()/1.74);
+   modal.css('left', winW/2 - modal.width()/1.95);
+}
