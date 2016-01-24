@@ -136,7 +136,7 @@
     <ul id="sortable" style="height:80vh; overflow:scroll">
       <?php 
         $mysqli = new mysqli('127.0.0.1', 'root', 'strtoupper', 'gramme');
-        $selectedPosts=$mysqli->query("SELECT posts.idposts, posts.title,posts.type,posts.year, i.url as url1, ii.url as url2 FROM posts LEFT JOIN images i on img1=i.idimages LEFT JOIN images ii on img2=ii.idimages WHERE idposts IN (SELECT idpost from homepage)");
+        $selectedPosts=$mysqli->query("SELECT posts.idposts, posts.title,posts.type,posts.year FROM posts WHERE idposts IN (SELECT idpost from homepage)");
         while ($row = $selectedPosts->fetch_row()) {
             echo '<li id="post1" post-id="'.$row[0].'" class="ui-state-default"><span class="ui-icon ui-icon-minus"></span><div style="float: left;height:100%">
               <img src="img/'.$row[4].'" style="height:100%">'
@@ -154,7 +154,7 @@
   <div id="postslist">
     <?php 
         $mysqli = new mysqli('127.0.0.1', 'root', 'strtoupper', 'gramme');
-        $selectedPosts=$mysqli->query("SELECT posts.idposts, posts.title,posts.type,posts.year, i.url as url1, ii.url as url2 FROM posts LEFT JOIN images i on img1=i.idimages LEFT JOIN images ii on img2=ii.idimages WHERE posts.idposts NOT IN (SELECT idpost from homepage)");
+        $selectedPosts=$mysqli->query("SELECT posts.idposts, posts.title,posts.type,posts.year FROM posts WHERE posts.idposts NOT IN (SELECT idpost from homepage)");
         while ($row = $selectedPosts->fetch_row()) {
             echo '<li id="post1" post-id="'.$row[0].'" class="ui-state-default"><span class="ui-icon ui-icon-plus"></span><div style="float: left;height:100%">
               <img src="img/'.$row[4].'" style="height:100%">'

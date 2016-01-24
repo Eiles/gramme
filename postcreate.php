@@ -50,7 +50,6 @@
       $(".title").clone().appendTo("#theform");
       $(".type").clone().appendTo("#theform");
       $(".year").clone().appendTo("#theform");
-      $(".year").clone().appendTo("#theform");
       $("#sortable li img").each(function(){
         var id=$(this).attr("data-id");
         $("input[data-id='"+id+"']").appendTo("#theform");

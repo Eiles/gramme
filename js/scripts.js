@@ -1,5 +1,8 @@
 $(function() {
     placeProjects();
+     $('#fond').click(function () {
+      hideModal();
+    });
 });
 
 var currentTop=0;
