@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'Oriya Sangam MN';
+    src: url('fonts/OriyaSangamMN.ttf') format('truetype');
+    src: url('fonts/OriyaSangamMN.oet');
+    src: url('fonts/OriyaSangamMN.woff');
+    src: url('fonts/OriyaSangamMN.svg');
+    src: url('fonts/OriyaSangamMN.woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body
+{
+    font-family: "Oriya Sangam MN";
+    overflow: auto
+}
+
+h1 {
+  font-family: "Oriya Sangam MN";
+  font-size: 25px;
+}
+h1:hover {
+  color:rgb(37,56,119);;
+}
+
+.modal img {
+  width: 99 %;
+}
+
+.project>img{
+	max-width: 20vw;
+	max-height: 20vh;
+}
+
+
+.project{
+	position: absolute;
+	top:5vh;
+	left:40vw;
+	transition: all 2s ease;
+}
+
+.form-add-post {
+	width: 90%; 
+    margin: auto;
+}
+
+.form-add-post label {
+	width: 30%;
+	vertical-align: top;
+}
+
+.form-add-post input {
+	width: 70%;
+}
+.form-add-post textarea {
+	width: 70%;
+	min-height: 100px
+}
+
+header {
+	margin-bottom: 20px;
+}
+
+.btn-delete-post {
+	position: absolute;
+	right: 0px;
+    top: 10px;
+	background-color: transparent;
+	outline: none;
+
+}
+.content-img {
+	position: relative;
+}
+
+#fond {
+   position:absolute;
+   width:100%;
+   left:0;
+   top:0;
+   z-index:9000;
+   background-color: rgba(0, 0, 0, 0.6);
+   display:none;
+}
+
+.popup {
+   color:white;
+   position:fixed;
+   top: 20px;
+   left: 0px;
+   width:600px;
+   height:100px;
+   display:none;
+   z-index:9999;
+   padding:50px; 
+   background-color: white;
+}
+
+#modal {
+   position: fixed;
+   color: black;
+   width:720px;
+   height:80%;
+   overflow: auto
+}
+
+.sousTitre{
+    font-size: 20px;
+    font-style: italic;
+    color: black    
+}

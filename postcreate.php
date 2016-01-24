@@ -47,6 +47,10 @@
     });
 
     $(document).on( "click","#savebutton",function(){
+      if($("#sortable li img").length==0){
+        alert("Impossible de créer un projet sans image");
+        return;
+      }
       $(".title").clone().appendTo("#theform");
       $(".type").clone().appendTo("#theform");
       $(".year").clone().appendTo("#theform");
@@ -64,7 +68,7 @@
  <nav class="navbar navbar-light bg-faded">
   <ul class="nav navbar-nav">
     <li class="nav-item active">
-      <a class="nav-link" href="admin">Gramme - Home <span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="admin.php">Gramme - Home <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Projects</a>

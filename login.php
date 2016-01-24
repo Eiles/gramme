@@ -18,6 +18,7 @@
 </nav>
 </header>
 <?php
+session_start();
 if (!isset($_POST['submit'])){
 ?>	
 <div style="width:60%;margin:auto">
