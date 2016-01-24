@@ -11,8 +11,7 @@
   <title>jQuery UI Sortable - Default functionality</title>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
-  <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js" integrity="sha384-XXXXXXXX" crossorigin="anonymous"></script>
- 
+  <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
 </head>
 <body>
 <header>
@@ -31,12 +30,18 @@
 </nav>
 </header>
   <div>
-    <a href="/postcreate.php"> Créer un projet GRAMME</a>
-    <a href="/postselect.php"> Gerer les projets GRAMME</a>
-    <a href="/studio/postcreate.php"> Créer un projet STUDIO</a>
-    <a href="/studio/postselect.php"> Gerer les projets STUDIO</a>
-    <a href="/design/postcreate.php"> Créer un projet DESIGN</a>
-    <a href="/design/postselect.php"> Gerer les projets DESIGN</a>
+    <div>
+      <a href="/postcreate.php"> Créer un projet GRAMME</a>
+      <a href="/postselect.php"> Gerer les projets GRAMME</a>
+    </div>
+    <div>
+      <a href="/studio/postcreate.php"> Créer un projet STUDIO</a>
+      <a href="/studio/postselect.php"> Gerer les projets STUDIO</a>
+    </div>
+    <div>
+      <a href="/design/postcreate.php"> Créer un projet DESIGN</a>
+      <a href="/design/postselect.php"> Gerer les projets DESIGN</a>
+    </div>
   </div>
 </body>
 </html>

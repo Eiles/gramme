@@ -7,7 +7,6 @@
     src: url('fonts/OriyaSangamMN.woff2');
     font-weight: normal;
     font-style: normal;
-
 }
 
 body
@@ -47,7 +46,7 @@ h1:hover {
 }
 
 .form-add-post label {
-	width: 30%;
+	width: 20%;
 	vertical-align: top;
 }
 
@@ -55,6 +54,23 @@ h1:hover {
 	width: 70%;
 }
 .form-add-post textarea {
+	width: 70%;
+	min-height: 100px
+}
+
+
+.form-login {
+	width: 50%
+}
+.form-login label {
+	width: 20%;
+	vertical-align: top;
+}
+
+.form-login input {
+	width: 70%;
+}
+.form-login textarea {
 	width: 70%;
 	min-height: 100px
 }
