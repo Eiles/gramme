@@ -30,13 +30,19 @@
   </ul>
 </nav>
 </header>
-  <div>
-    <a href="/postcreate.php"> Créer un projet GRAMME</a>
-    <a href="/postselect.php"> Gerer les projets GRAMME</a>
-    <a href="/studio/postcreate.php"> Créer un projet STUDIO</a>
-    <a href="/studio/postselect.php"> Gerer les projets STUDIO</a>
-    <a href="/design/postcreate.php"> Créer un projet DESIGN</a>
-    <a href="/design/postselect.php"> Gerer les projets DESIGN</a>
+  <div class="row" style="margin-left:50px;margin-top:50px">
+    <div class="col-md-3">
+      <a href="/postcreate.php" class="btn btn-primary-outline"> Créer un projet GRAMME</a> <br> <br>
+      <a href="/postselect.php" class="btn btn-primary-outline"> Gerer les projets GRAMME</a>
+    </div>
+    <div class="col-md-3">
+      <a href="/studio/postcreate.php" class="btn btn-success-outline"> Créer un projet STUDIO</a> <br> <br>
+      <a href="/studio/postselect.php" class="btn btn-success-outline"> Gerer les projets STUDIO</a>
+    </div>
+    <div class="col-md-3">
+      <a href="/design/postcreate.php" class="btn btn-info-outline"> Créer un projet DESIGN</a> <br> <br>
+      <a href="/design/postselect.php" class="btn btn-info-outline"> Gerer les projets DESIGN</a>
+    </div>
   </div>
 </body>
 </html>
